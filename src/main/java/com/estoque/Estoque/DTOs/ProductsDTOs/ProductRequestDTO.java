@@ -1,4 +1,4 @@
-package com.estoque.Estoque.DTOs;
+package com.estoque.Estoque.DTOs.ProductsDTOs;
 
 import java.time.LocalDateTime;
 

@@ -2,7 +2,6 @@ package com.estoque.Estoque.Controllers;
 
 import java.net.URI;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.estoque.Estoque.DTOs.ProductRequestDTO;
-import com.estoque.Estoque.DTOs.ProductResponseDTO;
-import com.estoque.Estoque.DTOs.ProductUpdateDTO;
+import com.estoque.Estoque.DTOs.ProductsDTOs.ProductRequestDTO;
+import com.estoque.Estoque.DTOs.ProductsDTOs.ProductResponseDTO;
+import com.estoque.Estoque.DTOs.ProductsDTOs.ProductUpdateDTO;
 import com.estoque.Estoque.Models.Product;
 import com.estoque.Estoque.Repositories.ProductRepository;
 
