@@ -3,7 +3,6 @@ package com.estoque.Estoque.Models;
 import java.time.LocalDateTime;
 
 import com.estoque.Estoque.DTOs.ProductsDTOs.ProductRequestDTO;
-import com.estoque.Estoque.DTOs.ProductsDTOs.ProductUpdateDTO;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
