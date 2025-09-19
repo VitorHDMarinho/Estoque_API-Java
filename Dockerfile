@@ -9,7 +9,7 @@ RUN mvn clean install
 
 FROM openjdk:8-jre-alpine
 
-COPY --from=build /app/target/*.jar /app/app.jar
+COPY --from=build /app/target/Estoque-0.0.1-SNAPSHOT.jar /app/app.jar
 
 WORKDIR /app
 
