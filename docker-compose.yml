@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: bitnami/postgresql:latest
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: ESTOQUE
+    volumes:
+      - estoque_data:/bitnami/postgresql
+      - ./scripts:/docker-entrypoint-initdb.d
+
+  app:
+    build: .
+    ports:
+     - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ESTOQUE
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 123456
+    
+volumes:
+ estoque_data:
+    

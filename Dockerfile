@@ -1,13 +1,13 @@
-FROM maven:3.8.4-jdk-8 AS BUILD
-
-COPY src /app/src
-COPY pom.xml /app
+FROM maven:3.9.4-eclipse-temurin-21 AS build
 
 WORKDIR /app
 
-RUN mvn clean install
+COPY pom.xml .
+COPY src /app/src
 
-FROM openjdk:8-jre-alpine
+RUN mvn clean install -DskipTests
+
+FROM eclipse-temurin:21-jre-alpine
 
 COPY --from=build /app/target/Estoque-0.0.1-SNAPSHOT.jar /app/app.jar
 
